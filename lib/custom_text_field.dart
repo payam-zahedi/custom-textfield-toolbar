@@ -14,18 +14,6 @@ import 'package:flutter/gestures.dart';
 
 export 'package:flutter/services.dart' show TextInputType, TextInputAction, TextCapitalization;
 
-/// Signature for the [CustomTextField.buildCounter] callback.
-typedef InputCounterWidgetBuilder = Widget Function(
-    /// The build context for the TextField
-    BuildContext context, {
-      /// The length of the string currently in the input.
-      @required int currentLength,
-      /// The maximum string length that can be entered into the TextField.
-      @required int maxLength,
-      /// Whether or not the TextField is currently focused.  Mainly provided for
-      /// the [liveRegion] parameter in the [Semantics] widget for accessibility.
-      @required bool isFocused,
-    });
 
 class _TextFieldSelectionGestureDetectorBuilder extends TextSelectionGestureDetectorBuilder {
   _TextFieldSelectionGestureDetectorBuilder({
