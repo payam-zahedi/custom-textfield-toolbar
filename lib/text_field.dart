@@ -2,6 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+import 'package:customtoolbar/text_selection.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -917,6 +918,7 @@ class _CustomTextFieldState extends State<CustomTextField> implements TextSelect
     switch (themeData.platform) {
       case TargetPlatform.iOS:
         forcePressEnabled = true;
+        ///updated - if you want to update cupertino style to you can update it
         textSelectionControls = cupertinoTextSelectionControls;
         paintCursorAboveText = true;
         cursorOpacityAnimates = true;
@@ -928,8 +930,8 @@ class _CustomTextFieldState extends State<CustomTextField> implements TextSelect
       case TargetPlatform.android:
       case TargetPlatform.fuchsia:
         forcePressEnabled = false;
-        ///change it to your selectionController
-        textSelectionControls = materialTextSelectionControls;
+        ///updated - this line updated with customTextSelection
+        textSelectionControls = customTextSelectionControls;
         paintCursorAboveText = false;
         cursorOpacityAnimates = false;
         cursorColor ??= themeData.cursorColor;

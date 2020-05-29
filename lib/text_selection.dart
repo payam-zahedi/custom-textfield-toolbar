@@ -173,6 +173,8 @@ class _CustomTextSelectionControls extends TextSelectionControls {
         child: _TextSelectionToolbar(
           handleCut: canCut(delegate) ? () => handleCut(delegate) : null,
           handleCopy: canCopy(delegate) ? () => handleCopy(delegate) : null,
+          /// updated - I just update this callback to show the dialog. you can easily override
+          /// the [canPaste] method and have you own implementation
           handlePaste: canPaste(delegate)
               ? () {
                   showDialog(
@@ -256,5 +258,5 @@ class _CustomTextSelectionControls extends TextSelectionControls {
   }
 }
 
-/// Text selection controls that follow the Material Design specification.
+///updated - Text selection controls that follow the Material Design specification.
 final TextSelectionControls customTextSelectionControls = _CustomTextSelectionControls();

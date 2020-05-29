@@ -41,6 +41,9 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Center(
+          /// updated - this class is simply changed TextField you can also create you own
+          /// TextField. you can use [EditableText] this is A basic text input field as documentation.
+          /// [CustomTextField] is simply copy of [TextField] widget that is edited in selection
           child: CustomTextField(
             decoration: InputDecoration(
               hintText: 'Your Text'
