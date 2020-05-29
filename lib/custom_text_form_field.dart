@@ -157,6 +157,7 @@ class CustomTextFormField extends FormField<String> {
             }
             field.didChange(value);
           }
+          /// updated - I just update this widget with [CustomTextField] widget.
           return CustomTextField(
             controller: state._effectiveController,
             focusNode: focusNode,
